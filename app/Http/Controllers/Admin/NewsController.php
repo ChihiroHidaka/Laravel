@@ -10,8 +10,6 @@ class NewsController extends Controller
     //
     public function  add ()
     {
-        var_dump('test');
-        exit;
         return view ('admin.news.create');
         
     }
