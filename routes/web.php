@@ -25,13 +25,13 @@ Route::controller(NewsController::class)->prefix('admin')->group(function() {
 
 use App\Http\Controllers\Admin\AAAController;
 Route::controller(AAAController::class)->prefix('admin')->group(function() {
-    Route::get('news/create', 'bbb');
+    Route::get('XXX', 'bbb');
 });
 
 use App\Http\Controllers\Admin\profileController;
 Route::controller(profileController::class)->prefix('admin')->group(function() {
-    Route::get('admin/profile/create ', 'add');
-    Route::get('admin/profile/edit', 'edit');
+    Route::get('profile/create ', 'add');
+    Route::get('profile/edit', 'edit');
 });
 
 

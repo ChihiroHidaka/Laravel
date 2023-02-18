@@ -12,5 +12,5 @@ class AAAController extends Controller
     {
         return view('admin.profile.create');
     
-}
+    }
 }

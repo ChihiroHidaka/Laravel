@@ -10,7 +10,9 @@ class NewsController extends Controller
     //
     public function  add ()
     {
-        return view ('adomin.news.create');
+        var_dump('test');
+        exit;
+        return view ('admin.news.create');
         
     }
 }
