@@ -14,16 +14,17 @@ class ProfileController extends Controller
         
     }
     
-    public function create()
+    public function create(Request $request)
     {
         return redirect('admin/profile/create');
+        
     }
     public function edit()
     {
         return view('admin.profile.edit');
     }
     
-    public function update()
+    public function update(Request $request)
     {
         return redirect('admin/profile/edit');
         
