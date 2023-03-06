@@ -5,15 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class History extends Model
+class ProfileHistory extends Model
 {
     use HasFactory;
     
+    use HasFactory;
+
     protected $guarded = array('id');
-    
+
     public static $rules = array(
-         'news_id' => 'required',
-        'edited_at' => 'required',
-        );
-        
+        'profile_id' => 'required',
+        'profileedited_at' => 'required',
+    );
 }
