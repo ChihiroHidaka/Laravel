@@ -58,6 +58,10 @@ class ProfileController extends Controller
     
    public function update(Request $request)
     {
+        /*
+        var_dump('テスト');
+        exit;
+        */
         // Validationをかける
         $this->validate($request, Profile::$rules);
         // News Modelからデータを取得する
@@ -69,12 +73,12 @@ class ProfileController extends Controller
         // 該当するデータを上書きして保存する
         $profiles->fill($profile_form)->save();
         
-        $profilehistory = new History();
+        $profilehistory = new ProfileHistory();
         $profilehistory->profile_id = $profiles->id;
         $profilehistory->profileedited_at = Carbon::now();
         $profilehistory->save();
 
-        return redirect('admin/profile');
+        return redirect('admin/profile/edit?id='. $profiles->id);
 
     }
 }
